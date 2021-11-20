@@ -24,7 +24,7 @@ struct HorizontalGridView: View {
         }
     }
 }
-
+//
 struct HorizontalGridView_Previews: PreviewProvider {
     static var previews: some View {
         HorizontalGridView()
