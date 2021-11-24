@@ -26,7 +26,7 @@ struct CustomGridView<Content, T>: View where Content: View { //чтобы сд�
                             ForEach(0..<columns) { columnIndex in //равное количеству столбцов
                                 if let index = indexFor(row: rowIndex, column: columnIndex) { //если мы сможем извлечь опциональное значение из метода, то тогда мы отобразим в виде текста
                                     content(items[index]) //отображаем контент
-                                        .frame(width: sideLength, height: sideLength) //делаем квадратики их ячеек
+                                        .frame(width: sideLength, height: sideLength) //делаем квадратики из ячеек
                                 } else {
                                     Spacer() //чтобы сдвинуть единицу влево
                                 }
@@ -46,7 +46,9 @@ struct CustomGridView<Content, T>: View where Content: View { //чтобы сд�
 
 struct CustomGridView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomGridView(items: [11, 3, 7, 17, 5, 2, 1], columns: 3) { item in
+   
+        CustomGridView(
+            items: [11, 3, 7, 17, 5, 2, 1], columns: 3) { item in
             Text("\(item)")
         }
     }

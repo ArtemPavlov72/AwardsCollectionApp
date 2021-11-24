@@ -11,7 +11,7 @@ import SwiftUI
 struct Award {
     let awardView: AnyView //для отображения каких-то view, добавляем соответствующий тип данных
     let title: String //название view
-    let awarded: Bool //заслуженная награда или нет
+    let awarded: Bool
     
     static func getAwards() -> [Award] {
         [
